@@ -1,3 +1,9 @@
+const express = require('express');
+const app = express();
+app.get('/', (req,res) => res.send('Satoru BOT is LIVE'));
+app.listen(process.env.PORT || 10000, '0.0.0.0', () => {
+  console.log('>> Web server forced on port', process.env.PORT || 10000);
+});
 process.on('unhandledRejection', error => console.log(error));
 process.on('uncaughtException', error => console.log(error));
 
